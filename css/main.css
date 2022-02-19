@@ -1,0 +1,66 @@
+/*
+  CSS 작명 ex. .navi-text , 
+    일반 -
+    부모 자식 __ 
+    태그명 태그 --
+  font-size 
+    vw : 현재 브라우저 창의 넓이
+    % : 내 부모 사이즈에 비례
+  letter-spacing : 자간 조절
+  span : 글자를 감쌀수 있는 별 뜻 없는 태그
+  class : style을 묶는 단위
+  #special : css 상에서 특별하게 하는 id 그렇지만 class 쓰는 편임
+  selector
+    1. class
+    2. tag
+    3. id
+  스타일 겹칠 경우 우선순위(1. style 2. id, 3. class 4. tag)따라 정해짐
+  margin : 상하좌우 여백  
+  padding : 상하좌우 안쪽 여백
+  div,p,h = display: block( 가로행을 전부 차지해주는 것 - 이 기준 양 옆에 못 씀) 가지고 있음
+  일부 스타일(font-size, font-family, color...)은 inherit(상속 : 부모 -> 자식) 됨 
+*/
+
+.profile {
+  width: 300px; 
+  display:block; 
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+.profile-title{
+  text-align: center;
+  font-size: 16px;
+}
+
+#special {
+  text-align: center;
+}
+
+.profile-content{
+  text-align: center;
+}
+
+.box{
+  width: 200px;
+  background-color: cadetblue;
+  margin: 10px;
+  padding : 40px;
+  border-radius: 15px;
+  margin-left:auto; 
+  margin-right:auto;
+  text-align: center;
+  color: white;
+  box-shadow: 7px 4px 5px black;
+}
+
+
+
+
+
+
+
+
+
+
+
