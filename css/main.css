@@ -1,25 +1,62 @@
 /*
+
+  참고1.
   CSS 작명 ex. .navi-text , 
     일반 -
     부모 자식 __ 
     태그명 태그 --
+    
+  스타일 겹칠 경우 우선순위(1. style 2. id, 3. class 4. tag)따라 정해짐
+
+  div,p,h = display: block( 가로행을 전부 차지해주는 것 - 이 기준 양 옆에 못 씀) 가지고 있음
+
+  일부 스타일(font-size, font-family, color...)은 inherit(상속 : 부모 -> 자식) 됨 
+
+  부모 100 중 자식 20, 80 이런식으로 나눠서 쓰면 됨.
+
+  select 문법 
+    공백  : ~안에 있는 모든자식 ex) .profile li
+    >     : ~안에 있는 직계자식 ex) .profile>li
+
+  margin collapse 현상 : 박스 2개가 위쪽 테두리가 겹침 -> 이럴 경우 margin도 합쳐짐
+
+  참고2.
   font-size 
     vw : 현재 브라우저 창의 넓이
     % : 내 부모 사이즈에 비례
+
   letter-spacing : 자간 조절
+
   span : 글자를 감쌀수 있는 별 뜻 없는 태그
+
   class : style을 묶는 단위
+
   #special : css 상에서 특별하게 하는 id 그렇지만 class 쓰는 편임
+
   selector
     1. class
     2. tag
-    3. id
-  스타일 겹칠 경우 우선순위(1. style 2. id, 3. class 4. tag)따라 정해짐
+    3. id(special or id 인듯)
+  
   margin : 상하좌우 여백  
+  
   padding : 상하좌우 안쪽 여백
-  div,p,h = display: block( 가로행을 전부 차지해주는 것 - 이 기준 양 옆에 못 씀) 가지고 있음
-  일부 스타일(font-size, font-family, color...)은 inherit(상속 : 부모 -> 자식) 됨 
+
+  float : 요소를 붕 띄워서 왼쪽정렬
+
+  clear: both = folat 다음에 오는 요소에게 주면 float로 발생하는 이상한 현상 해결
+
+  display: inline-block; 내 크기만큼 차지
+
+  vertical-align: top; 상하정렬
+
+  text-decoration: none; a 태그의 밑줄제거 가능
+
 */
+
+a{
+  text-decoration: none;
+}
 
 .profile {
   width: 300px; 
@@ -28,18 +65,19 @@
   margin-right:auto;
 }
 
-.profile-title{
+.profile__title{
   text-align: center;
   font-size: 16px;
+}
+
+.profile__content{
+  text-align: center;
 }
 
 #special {
   text-align: center;
 }
 
-.profile-content{
-  text-align: center;
-}
 
 .box{
   width: 200px;
@@ -54,13 +92,85 @@
   box-shadow: 7px 4px 5px black;
 }
 
+.navbar li{
+  display: inline-block;
+  width: 60px;
+  text-align: center;
+  background: #eee;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left:auto; 
+  margin-right:auto;
+}
 
+.navbar a{
+  font-size: 16px;
+}
 
+.container{
+  width: 800px;
+  margin-left:auto; 
+  margin-right:auto;
+}
 
+.container__left{
+  width: 60%;
+  height: 200px;
+  display: inline-block;
+}
 
+.container__header{
+  height: 100px;
+  display: block;
+}
 
+.container__header-img{
+  width:50px;
+}
 
+.container__header-content{
+  display: inline-block;
+  vertical-align: top;
+}
 
+.container__content{
+  height: 50px;
+  display: block;
+}
 
+.container__img{
+  width: 39%;
+  display: inline-block;
+  vertical-align: top;
+  height: 150px;
+}
 
+.main-background{
+  width:100%;
+  height: 500px;
+  background-color: aliceblue;
+  background-image: url(/img/shoes.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1px;
+}
+
+.main-title{
+  color: white;
+  font-size: 40px;
+  margin-top: 100px;
+}
+
+.main-content{
+  
+}
+
+.main-content a{
+  color: #eee;
+}
+
+.main-content-detail{
+  color: #eee;
+}
 
