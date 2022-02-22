@@ -20,6 +20,14 @@
 
   margin collapse 현상 : 박스 2개가 위쪽 테두리가 겹침 -> 이럴 경우 margin도 합쳐짐
 
+  body margin 기본값으로 있음
+
+  position부여시
+    1. 좌표이동가능
+    2. 공중에 뜸
+
+  브라우저 간의 호환성 이슈 : normalize.css 이거 찾아보면 될듯
+
   참고2.
   font-size 
     vw : 현재 브라우저 창의 넓이
@@ -52,10 +60,31 @@
 
   text-decoration: none; a 태그의 밑줄제거 가능
 
+  position: 
+    relative; 내 원래 위치를 기준으로 이동하세요.(기준점 잡는 속성)
+    stitic : 좌표이동 x
+    fixed : 현재 화면이 기준
+    absolute : 내 부모 태그 중에 position : relative 가진 부모 기준
+
+  position : absoulte 준 요소 가운데 정렬 하려면 left,right 0, margin auto, width 적절한 크기
+
+  z-index : 어떤놈이 앞으로 올지 결정
+  
+  max-width : 최대 넓이
+
+  box-sizing : width 를 주면 margin, padding 추가 되는데, 다 포함해서 결정하는 것
 */
 
 a{
   text-decoration: none;
+}
+
+div, input, textarea{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
 }
 
 .profile {
@@ -154,6 +183,7 @@ a{
   background-repeat: no-repeat;
   background-position: center;
   padding: 1px;
+  text-align: center;
 }
 
 .main-title{
@@ -163,14 +193,88 @@ a{
 }
 
 .main-content{
+  color: #eee;
+}
+
+.main-button{
+  padding: 15px;
+  font-size: 20px;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 150px;
+}
+
+.main-popup-background{
+  background-color: #eee;
+  position: relative;
+  top: -50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 100px;
+  border-radius: 5px;
+  padding: 10px;
+  padding-bottom: 20px;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.form-blackground{
+  background-color: black;
+  padding: 30px;
+}
+
+.form-whiteground{
+  background-color: white;
+  padding: 30px;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-input{
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.w-50{
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+
+.w-100{
+  width: 100%;
+  padding: 10px;
+}
+
+.yellow-button{
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  border: none;
+  border-radius: 4px;
   
 }
 
-.main-content a{
-  color: #eee;
-}
 
-.main-content-detail{
-  color: #eee;
-}
+
+
+
+
+
+
+
+
+
+
+
 
