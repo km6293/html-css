@@ -286,10 +286,14 @@ td,th{
 .cart-table{
   background-color: white;
   width: 100%;
-  max-width: 700px;
-  margin: auto;
-  border-radius: 10px;
+  border-radius: 10px;  
 }
+
+.cart-item{
+  margin: auto;
+  max-width: 700px;
+}
+
 
 .btn{
   padding: 15px;
@@ -299,6 +303,9 @@ td,th{
   background-color: coral;
   color: white;
   cursor: pointer;
+  margin-top: 25px;
+  margin-left: auto;
+  display: block;
 }
 
 .btn:hover{
@@ -318,5 +325,6 @@ td,th{
 .custom-link:visited{
   color: black
 }
+
 
 
