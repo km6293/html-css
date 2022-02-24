@@ -63,7 +63,17 @@
   display: inline - 항상 옆으로 채워지는 폭과 너비가 없는 요소
   .cart-table th:nth-child(n) n번째 등장하는 요소만 스타일링
   :hover - 마우스올릴 때 스타일, pseudo-class
+  transform: rotate(-0.04deg); 굴림체 할때, 확대해서 보면 글자 깨질때가 있는데 회전하면 선명해짐 개꿀팁
+  justify-content: center; display : flex 일때 센터정렬
+  flex-direction: column : 세로정렬
+  align-items : center flex 이용시 상하정렬
+  flex-grow : 1 박스크기 비율로 설정가능
 */
+
+@font-face{
+  font-family: 'Montserrat';
+  src:url(../font/Montserrat-ExtraLightItalic.ttf)
+}
 
 a{
   text-decoration: none;
@@ -75,6 +85,11 @@ div, input, textarea{
 
 body{
   margin: 0;
+  font-family: 'Montserrat';
+}
+
+p,h4,h3,h2,h1,span{
+  transform: rotate(-0.04deg);
 }
 
 table{
@@ -186,6 +201,19 @@ td,th{
   height: 150px;
 }
 
+.flex-container{
+  display: flex;
+  height: 50px;
+  background-color: rgb(214, 152, 152);
+  align-items: center;
+}
+
+.flex-item{
+  width: 100px;
+  margin: 5px;
+  color: white;
+}
+
 .main-background{
   width:100%;
   height: 500px;
@@ -228,12 +256,21 @@ td,th{
   left: 0;
   right: 0;
   margin: auto;
-  height: 100px;
+  height: 220px;
   border-radius: 5px;
   padding: 10px;
   padding-bottom: 20px;
   max-width: 400px;
   box-sizing: border-box;
+  text-align: center;
+}
+
+.main-popup-title{
+  font-size: 18px;
+}
+
+.main-popup-content{
+  font-size: 14px;
 }
 
 .form-blackground{
