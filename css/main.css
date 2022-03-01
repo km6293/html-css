@@ -68,6 +68,8 @@
   flex-direction: column : 세로정렬
   align-items : center flex 이용시 상하정렬
   flex-grow : 1 박스크기 비율로 설정가능
+  vw - viewwidth , vh - viewHeight, 
+  rem - 기본 폰트사이즈에 비례, em - 내 폰트사이즈의 x 배
 */
 
 @font-face{
@@ -364,4 +366,36 @@ td,th{
 }
 
 
+.main-title{
+  font-size: 30px;
+}
+.subtitle-conttainer{
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.subtitle-conttainer div{
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+
+@media screen and (max-width:1200px) {
+  .subtitle-conttainer div{
+    width: 50%;
+  }
+
+  .subtitle-conttainer{
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .subtitle-conttainer div{
+    width: 100%;
+  }
+}
 
